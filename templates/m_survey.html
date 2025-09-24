@@ -1,0 +1,58 @@
+{{define "m_survey"}}
+{{template "header" .}}
+{{template "banner" .}}
+    <section>
+      <article>
+        {{.User}}
+      <div class="contents" id="contents">
+            <div class="contents_list">
+                <!-- {{.SurveyList}} -->
+                {{range .SurveyList}}
+                    <div class="survey_list">
+                      <div class="survey_box">  
+                        <form class ="survey_list_form">                      
+                          <input type="hidden" value="{{.Id}}" name="survey_id" class="id_value"/>
+                          <input type="hidden" value="{{.Survey_name}}" name="survey_name" class="id_value"/>   
+                          <input type="hidden" value="{{.Drawing}}" name="survey_draw" class="id_value"/>              
+                        </form>
+                        <li>{{.Survey_name}}</li>
+                        <li>뽑기 :
+                          {{if eq .Drawing ""}}
+                              없음
+                          {{else}}
+                              {{.Drawing}}
+                          {{end}}
+                        </li>
+                        <li>응시 수 : {{.Respondent}}</li>
+                      </div>
+                      <div class="survey_list_menu">
+                        <div onclick="survey_show(this)" class="survey_list_menu_item">
+                          설문조사
+                        </div>
+                        <div onclick="survey_amend(this)" class="survey_list_menu_item" >
+                          수정하기
+                        </div>
+                        <div onclick="survey_statistics(this)" class="survey_list_menu_item" >
+                          통계
+                        </div>
+                        <div onclick="survey_delete(this)" class="survey_list_menu_item">
+                          삭제하기
+                        </div>
+                      </div>
+                    </div>
+                {{end}}
+            </div>
+        </div>
+      </article>
+    </section>
+
+    <div class="m_survey_plus_box">
+      <form method="post" action="/survey_plus_page">
+        <button type="submit" class="m_survey_plus_btn">+</button>
+      </form>
+    </div>
+  </body>
+  <script  src="js/m_survey.js" defer></script>
+  <link rel="stylesheet" href="css/m_survey.css" />
+</html>
+{{end}}

@@ -1,0 +1,29 @@
+{{define "main"}}
+{{template "header" .}}
+{{template "banner" .}}
+    <section>
+      <article>
+      <div class="contents" id="contents">
+        <div class="contents_list">
+            <div class="m_survey" id="m_survey_id">
+              <form action="/m_survey" method="POST" accept-charset="utf-8" enctype="multipart/form-data" id="m_survey_form">
+                 <h1>설문조사</h1>                 
+              </form>
+            </div>
+            <div class="m_pachinko" id="m_pachinko_id">
+              <form action="/m_pachinko" method="POST" accept-charset="utf-8" enctype="multipart/form-data"  id="m_pachinko_form">
+                <h1>뽑기</h1>
+              </form>
+            </div>
+            <div class="m_custom" id="m_custom_id">
+              <form action="/m_custom" method="POST" accept-charset="utf-8" enctype="multipart/form-data"  id="m_custom_form">
+                <h1>커스텀 설문</h1>
+              </form>
+            </div>
+        </div>
+      </article>
+    </section>
+  </body>
+  <script type="module" src="js/main.js" defer></script>
+</html>
+{{end}}

@@ -1,0 +1,24 @@
+.survey_do_submit_box{
+    margin-top: 400px;
+}
+
+.survey_do_submit_btn{
+    margin-top: 200px;
+}
+
+.survey_contents_blank_box{
+    height: 100px;
+}
+
+.survey_question_box{
+    margin-top: 30px;
+}
+
+.survey_answer_box{
+    margin-bottom: 30px;
+}
+
+input[type=text]{
+    width: 50%;
+    height: 60px;
+}

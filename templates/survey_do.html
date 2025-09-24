@@ -1,0 +1,65 @@
+{{define "survey_do"}}
+{{template "header" .}}
+<!-- {{template "banner" .}} -->
+
+    <section>
+        <article>
+            <div class="contents" id="contents">
+                <div class="survey_title_box">
+                    <h1>{{.M_title}}</h1>
+                </div>
+                <div class="survey_contents_box">
+                    <Form id = "survey_respond_form">
+                        <input type="hidden" value="{{.M_id}}" name="survey_id"/>
+                        <input type="hidden" value="{{.M_draw}}" name="survey_draw"/>
+                        {{$preId := "0"}}
+                        <div class="survey_contents_blank_box">
+                            {{range .Survey_Qa_List}}            
+
+                                {{if eq .Id $preId}}       
+                                    {{if eq .Form "t"}}
+                                        <input type = "text" class="survey_contents_A" name="{{.Id}}" >
+                                    {{else if eq .Form "r"}}
+                                        <label><input type = "radio" class ="survey_contents_A" name="{{.Id}}" value="{{.A_id}}">{{.A_content}}</label>
+                                    {{else}}
+                                        <label><input type = "checkbox" class ="survey_contents_A" name="{{.Id}}" value="{{.A_id}}">{{.A_content}}</label>
+                                    {{end}}
+                                {{else}}
+                                    </div>
+                                    <div class="survey_question_box">
+                                    <p>{{.Q_content}}</p>
+                                    </div>
+                                    <div class="survey_answer_box">
+                                    {{if eq .Form "t"}}
+                                        <input type = "text" class="survey_contents_A" name="{{.Id}}" >
+                                    {{else if eq .Form "r"}}
+                                        <label><input type = "radio" class ="survey_contents_A" name="{{.Id}}" value="{{.A_id}}">{{.A_content}}</label>
+                                    {{else}}
+                                        <label><input type = "checkbox" class ="survey_contents_A" name="{{.Id}}" value="{{.A_id}}">{{.A_content}}</label>
+                                    {{end}}
+                                    
+                                    {{$preId = .Id}}
+                                {{end}}
+                                
+                            {{end}}
+                         
+                    </Form>
+                </div>
+                
+                <div class="survey_do_submit_box">
+        
+                    <button type="button" class="survey_do_submit_btn" id="survey_do_submit_btn_id">설문 제출하기</button>
+                    
+                </div>
+
+            </div>
+        </article>
+    </section>
+    
+    
+    
+</body>
+<script src="js/survey_do.js" defer></script>
+<link rel="stylesheet" href="css/survey_do.css" />
+</html>
+{{end}}

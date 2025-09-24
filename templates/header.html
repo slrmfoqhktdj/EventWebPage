@@ -1,0 +1,55 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width,initial-scale=1"
+    />
+
+    <script type="module" src="js/header.js" defer></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>이벤트 홈페이지</title>
+    
+  </head>
+  <body>
+    <header>
+    <nav class="navbar">
+      <div class="navbar_logo">
+        <a href="/">Event home</a>
+      </div>
+
+      <div class="navbar_menu">
+        <a href="#m_banner_id">배너</a>
+        <a href="#m_survey_id">설문조사</a>
+        <a href="#m_pachinko_id">뽑기</a>
+        <a href="#m_custom_id">커스텀 설문</a>
+      </div>
+      <ul class="navbar_link">
+        <i><button class="loginpagebtn" id = "loginpagebtn_h">로그인</button></i>
+      </ul>
+    </nav>
+    </header>
+
+    <div id="login_modal">
+      <div class="login_modal_window">
+        <div class="login_modal_close_btn">X</div>
+        <div class="login_modal_title">
+            <h2>로그인</h2>
+        </div>
+        <div class="login_modal_content">
+          <form id="login_form">
+            <li><label>ID <input type="text" id="login_idtext_id" class="login_idtext" name="login_idtext"></label></li>
+            <li><label>PW <input type="text" id="login_pwtext_id" class="login_pwtext" name="login_pwtext"></label></li>
+          </form>                   
+        </div>
+        <div>
+          <div id = "login_button_box_id" class="login_button_box">
+              <button id="login_btn_id" class="login_btn">로그인</button>
+          </div>      
+        </div>
+      </div>
+    </div>
+{{end}}

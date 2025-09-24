@@ -1,0 +1,155 @@
+body,html{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background-image: url(../m_evt_img/drawinglots_bbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contents{
+    width: 70vw;
+    height: 90vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    
+    background-image: url(../m_evt_img/drawinglots_board.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+
+.contents_header_box{
+    width: 100%;
+    height: 45%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents_header_inner_box{
+    width: 100%;
+    height: 75%;
+    background-image: url(../m_evt_img/drawinglots_header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    /* 크롬 화질 개선 */
+    /* image-rendering: -webkit-optimize-contrast; */
+    backface-visibility: hidden;
+}
+
+.contents_item_box{
+    width: 100%;
+    height: 50%;
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents_item_inner_box{
+    width: 100%;
+    height: 100%;
+}
+
+.contents_item{
+    background-image: url(../m_evt_img/drawinglots_item.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+}
+
+#custom_drawinglots_modal{
+    display: none;
+}
+
+.custom_drawinglots_window{
+    /* background: rgb(255, 255, 255);
+    box-shadow: 0 8px 32px 0 rgba(190, 190, 190, 0.37);
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    position: relative;
+    padding: 20px; */
+
+    width: 50vw;
+    height: 25vh;
+   
+}
+
+/* #close_btn{
+    width: 25px;
+    height: 25px;
+    background-image: url(../m_evt_img/survey_cancel.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position:center;
+
+    margin-right: 20px;
+    padding: 30px 30px 30px 30px;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+} */
+
+/* iPad 세로 */
+@media screen and (min-width : 768px) and (max-width : 1023px) and (orientation : portrait ) {
+    #contents {
+        width: 50vw;
+        height: 70vh;
+        
+    }
+    .contents_item_box{
+        width: 80%;
+        height: 50%;
+        /* 중앙정렬 */
+        margin: 0 auto;
+    }
+    
+    
+}
+/* iPad Pro 세로 */
+@media screen and (min-width : 1024px) and (max-width : 1365px) and (orientation : portrait ) {
+    #contents {
+        width: 50vw;
+        height: 70vh;
+        
+    }
+    .contents_item_box{
+        width: 80%;
+        height: 50%;
+        /* 중앙정렬 */
+        margin: 0 auto;
+    }
+    
+    
+}
+
+@supports (-webkit-touch-callout: none) {
+    #contents {
+        background: url(../m_evt_img/drawinglots_board.png) center top no-repeat scroll;
+        background-size: auto 100%;
+    }
+}
+
+
+
+

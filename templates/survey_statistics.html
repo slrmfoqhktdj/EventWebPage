@@ -1,0 +1,37 @@
+{{define "survey_statistics"}}
+{{template "header" .}}
+<!-- {{template "banner" .}} -->
+
+    <section>
+        <article>
+            <div class="contents" id="contents">
+                <div class="survey_statistics_title_box">
+                    <h1>{{.M_title}} 통계</h1>
+                </div>
+                <div class="survey_statistics_contents_box">                         
+                    {{range .Survey_stts_list}}
+                        <div class="survey_statistics_list_box">            
+                            {{.Q_content }}
+                            {{.A_content }}
+                            {{.A_resp  }}  
+                            {{.Form  }}   
+                        </div> 
+                    {{end}}
+                    
+                </div>
+            </div>
+        </article>
+    </section>
+    
+    <div class="survey_statistics_submit_box">
+        <form id = "survey_statistics_submit_form">
+            <button type="button" class="survey_statistics_submit_btn" id="survey_statistics_submit_btn_id">돌아가기</button>
+        </form>
+    </div>
+    
+</body>
+
+<script src="js/survey_statistics.js" defer></script>
+<link rel="stylesheet" href="css/survey_statistics.css" />
+</html>
+{{end}}

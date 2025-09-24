@@ -1,0 +1,77 @@
+{{define "survey_plus"}}
+{{template "header" .}}
+<!-- {{template "banner" .}} -->
+
+    <section>
+        <article>
+            <div class="contents" id="contents">
+                <div class="survey_title_index_box">
+                    <p>설문 제목</p>
+                </div>
+                <form class="survey_plus_submit_form" id="survey_plus_submit_form_id">
+                    <input type="hidden" id = "s_r_v_id" name="s_r_v">
+                    <input type="hidden" id = "s_q_v_id" name="s_q_v">
+                    <input type="text" id="survey_title" name ="s_t">
+
+                    <input type="hidden" id = "s_d_t_id" name="s_d_t">
+                    <input type="hidden" id = "s_d_s_x_id" name="s_d_s_x">
+                    <input type="hidden" id = "s_d_s_y_id" name="s_d_s_y">
+                    <input type="hidden" id = "s_d_v_id" name="s_d_v">
+                    <input type="hidden" id = "s_d_r_id" name="s_d_r">
+                </form>
+                
+                <div class="contents_list" id="contents_list_id">
+                </div>
+                
+                <div class="survey_question_plus_box">
+                    <button class="survey_question_plus_btn" id="survey_question_plus_btn_id">질문 추가하기</button>
+                </div>
+
+                <div class="survey_drawinglots_select_box">
+                    <li>
+                        <P>설문 후 추첨을 추가하시겠습니까?</P>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="drawinglots_selector" value="y" onclick="create_drawinglots_contents()">예</label>
+                        <label><input type="radio" name="drawinglots_selector" value="n" checked="checked" onclick="create_drawinglots_contents()">아니오</label>
+                    </li>
+                    <li id="survey_drawinglots_contents_li_id">
+                        <div class="survey_drawinglots_contents_box" id="survey_drawinglots_contents_box_id">
+                            <div class="survey_drawinglots_title_box">
+                                <label>제목 <input type="text" name="survey_drawinglots_title" id="survey_drawinglots_title_id"></label>
+                            </div>
+                            <div class="survey_drawinglots_size_box">
+                                <label>사이즈 <input type="number" name="survey_drawinglots_size" id="survey_drawinglots_size_x_id" min="1" max="70" placeholder="70이하 숫자" value="10">X<input type="number" name="survey_drawinglots_size" id="survey_drawinglots_size_y_id" min="0" max="70" placeholder="70이하 숫자" value="10"></label>
+                            </div>
+                            <div class="survey_drawinglots_item_box">
+                                <div class="survey_drawinglots_item_list_box" id="survey_drawinglots_item_list_box_id">
+                                    <div class="survey_drawinglots_item" id="survey_drawinglots_item0">
+                                        <input type="text"  id="survey_drawinglots_item_pro0" class="survey_drawinglots_item_pro">
+                                        <input type="number"  id="survey_drawinglots_item_cnt0" class="survey_drawinglots_item_cnt" min="1" value="1">
+                                    </div>
+                                </div>
+                                <button type="button" class="survey_drawinglots_item_plus_btn" id="survey_drawinglots_item_plus_btn_id" onclick="create_drawinglots_item()">+</button>
+                            </div>
+                            <div class="survey_drawinglots_raincheck_box">
+                                <label>꽝 멘트 <input type="text" name="survey_drawinglots_raincheck" id="survey_drawinglots_raincheck_id"></label>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </div>
+                
+            </div>
+        </article>
+    </section>
+    
+    <div class="survey_plus_submit_box">
+        
+        <button type="button" class="survey_plus_submit_btn" id="survey_plus_submit_btn_id">설문 만들기</button>
+        
+    </div>
+    
+</body>
+<script src="js/survey_plus.js" defer></script>
+<link rel="stylesheet" href="css/survey_plus.css" />
+</html>
+{{end}}

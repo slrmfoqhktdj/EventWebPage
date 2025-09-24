@@ -1,0 +1,71 @@
+{{define "drawinglots_do"}}
+{{template "header" .}}
+<!-- {{template "banner" .}} -->
+
+    <section>
+        <article>
+            <div class="contents" id="contents">
+                <input type="hidden" id="m_rain_id" name="m_rain" value="{{.M_rain}}">
+                <form id="drawinglots_do_checked_form">
+                    <input type="hidden" id="m_checked_id" name="checked_num" >
+                    <input type="hidden" id="m_id" name="m_id" value="{{.M_id}}">
+                </form>
+                
+               
+
+                <table>
+                {{range $xi, $xv := .M_xy}}   
+                    <tr>      
+                    {{range $yi,$yv := $xv}}
+
+                        {{if eq $yv.Checked "c"}}
+                            <th>                         
+                                <div class="draw_box_c" id="draw_box{{$yv.Num}}" >
+                                    {{$yv.Num}}
+                                </div>                                                          
+                            </th>
+                        {{else}}
+                            <th>                         
+                                <div class="draw_box_n" id="draw_box{{$yv.Num}}" onclick="num_div_click(this,'{{$yv.Num}}','{{$yv.Item}}')" >
+                                    {{$yv.Num}}
+                                </div>                                                          
+                            </th>
+
+                        {{end}}
+                    {{end}}
+                    </tr>
+                {{end}}
+                </table>               
+          
+            </div>
+        </article>
+    </section>
+    
+    <div class="survey_do_submit_box">
+        
+        <button type="button" class="survey_do_submit_btn" id="survey_do_submit_btn_id">설문 제출하기</button>
+        
+    </div>
+
+    <div id="result_modal">
+        <div class="result_modal_window">
+            <div class="result_modal_title">
+                <h2>결과</h2>
+            </div>
+            <div class="result_modal_content">                   
+                <div id = "contents_msg_0" class="contents_msg_box">
+                    <p id = "result_item_id" class="result_item"></p>
+                </div>
+            </div>
+            <div>
+                <button id = "ok_btn">한번 더 투표하기</button>
+                <button id = "no_btn">마치기</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="js/drawinglots_do.js" defer></script>
+<link rel="stylesheet" href="css/drawinglots_do.css" />
+</html>
+{{end}}

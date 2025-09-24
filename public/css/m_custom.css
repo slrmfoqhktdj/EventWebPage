@@ -1,0 +1,356 @@
+html{
+    /* touch-action: none; */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+body{
+    background-image: url(../m_evt_img/custom_bg_img.png);
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.survey_do_submit_box{
+    text-align: right;
+}
+
+
+.survey_do_submit_btn{
+    margin-top: 10%;
+    font-size: 25px;
+    color: white;
+    background-color: #00B6C1;
+    width: 30%;
+    /* 세로방향 | 가로방향 */
+    padding: 1% 3%;
+    border-radius: 20px;
+    border: 0;
+    /* offset-x | offset-y | color */
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.623);
+}
+
+.survey_contents_blank_box{
+    height: 30%;
+}
+
+.survey_question_box{
+    margin-top: 6%;
+    margin-bottom: 3%;
+    text-align: left;
+    font-size: 25px;
+}
+
+.survey_inner_question_box,.survey_inner_m_question_box{
+    text-align: left;
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.survey_inner_question_box p{
+    color: red;
+}
+
+.survey_inner_m_question_box{
+    margin-bottom: 20px;
+}
+
+.survey_answer_box{
+    margin-bottom: 30px;
+  
+}
+
+.survey_canvas{
+    width: 100%;
+    height: 200px;
+    border: 3px solid #00B6C1;
+    border-radius: 13px;
+    touch-action:none;
+}
+
+#survey_canvas03{
+    height: 400px;
+}
+
+.survey_canvas_option_box{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin-top: 1%;
+}
+
+.survey_canvas_option_all_cleaner{
+    background-color: white;
+    border: 2px solid #00B6C1;
+    border-radius: 13px;
+    color:black;
+}
+
+.survey_canvas_option_dot_cleaner{
+    background-color: white;
+    border: 2px solid #00B6C1;
+    border-radius: 13px;
+    margin-right: 5%;
+    color:black;
+}
+
+.survey_tel{
+    width: 100%;
+    height: 100px;
+    border: 3px solid #00B6C1;
+    border-radius: 13px;
+    text-align: center;
+    resize: none;
+    font-size: 25px;
+}
+
+.survey_keyboard_box{
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.survey_keyboard,.survey_keyboard_d{
+    width: 7%;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #00B6C1;
+    border-radius: 13px;
+    color:black;
+}
+
+.contents{
+    background-color: white;
+    width: 80%;
+    margin:0 auto;
+    border: 0;
+    border-radius: 30px;
+    /* 위 | 가로방향 | 아래 */
+    padding: 10% 5% 8%;
+    box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.644);
+}
+
+.survey_title_box{
+    text-align: center;
+    background-color: #00B6C1;
+    width: 85%;
+    margin: 0 auto;
+    color: white;
+    border-radius: 20px;
+    font-size: 40px;
+    padding: 3% 0;
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.623);
+}
+
+.survey_contents_blank_box{
+    width: 100%;
+    background-color: #00B6C1;
+    height: 20px;
+    margin-top: 5%;
+    box-shadow: 1px 2px 5px 1px rgba(128, 128, 128, 0.623);
+}
+
+
+
+input[type=radio]{
+    appearance: none;
+    border: 3px solid #00B6C1;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+input[type=radio]:checked{
+    background-color: #00B6C1;
+    border: 3px solid #00B6C1;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+input[type=checkbox]{
+    appearance: none;
+    border: 3px solid #00B6C1;
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox]:checked{
+    background-color: #00B6C1;
+    border: 3px solid #00B6C1;
+    width: 20px;
+    height: 20px;
+}
+
+
+label{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.survey_answer_inner_box_r{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.survey_answer_inner_box_c{
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+
+.survey_answer_inner_box_c label{
+    margin-top: 2%;
+}
+
+.survey_closing_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+    font-size: 16px;
+}
+
+#verticalBox1{
+    display: table-cell;
+    width: 100%;
+}
+
+#verticalBox1 b{
+    width: 93%;
+    text-align: left;
+}
+
+#verticalBox1 label{
+    margin-top: 10px;
+}
+
+/* #survey_canvas{
+    touch-action: none;
+} */
+
+/*태블릿 세로 */
+@media screen and (min-width : 321px) and (max-width : 767px) and (orientation : portrait ) {
+    .survey_title_box b{
+        font-size: 27px;
+    }
+    
+    .survey_question_box b{
+        font-size: 18px;
+    }
+    
+    .survey_inner_question_box p {
+        font-size: 15px;
+    }
+
+}
+
+/* iPad Pro 세로 */
+@media screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait ) {
+    .survey_title_box b{
+        font-size: 37px;
+    }
+
+    .survey_question_box b{
+        font-size: 22px;
+    }
+}
+
+#layerPopup { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.63); 
+    z-index: 1000; 
+    justify-content: center; 
+    align-items: center; 
+    margin: -30px 0 0 -30px; 
+} 
+#spinner { 
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    border: 8px solid rgba(0, 0, 0, 0.63); /* Light grey */ 
+    border-top: 8px solid #00B6C1; /* Blue */ 
+    border-radius: 50%; 
+    width: 60px; 
+    height: 60px; 
+    animation: spinner 2s linear infinite; 
+} 
+@keyframes spinner { 
+    0% { 
+        transform: rotate(0deg); 
+    } 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+}
+
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+/* 스마트폰 세로*/
+/* @media screen and (max-device-width: 320px){
+    .survey_canvas {
+        width: 80vmin;
+        height: 80vmin;
+    }
+}*/
+/* 태블릿 세로 */
+/* @media screen and (min-width : 321px) and (max-width : 767px) and (orientation : portrait ) {
+    .survey_canvas {
+        width: 90vmin;
+        height: 90vmin;
+    }
+} */
+/* iPad Pro 세로 */
+/* @media screen and (min-width : 768px) and (orientation : portrait ) {
+    .survey_canvas {
+        width: 900px;
+        height: 900px;
+    }
+} */
+/* 스마트폰 가로 */
+/* @media screen and (max-width : 767px) and (orientation : landscape ) {
+    .survey_canvas {
+        width: 70vmax;
+        height: 60vmin;
+    }
+} */
+/* 태블릿 가로 */
+/* @media screen and (min-width : 768px) and (max-width : 1365px) and (orientation : landscape ) {
+    .survey_canvas {
+        width: 90vmax;
+        height: 70vmin;
+    }
+} */
+/* iPad Pro 가로, 데스크탑 */
+/* @media screen and (min-width : 1366px) and (max-width : 1599px) and (orientation : landscape ) {
+    .survey_canvas {
+        width: 90vmax;
+        height: 80vmin;
+    }
+} */
+/* 큰 모니터 16:9 */
+/* @media screen and (min-width : 1600px) {
+    .survey_canvas {
+        width: 1600px;
+        height: 900px;
+    }
+}  */

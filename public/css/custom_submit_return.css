@@ -1,0 +1,68 @@
+body,html{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.contents_box{
+    height: 100vh;
+    background-image: url(../m_evt_img/drawinglots_bbg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contents{
+    width: 70vw;
+    height: 90vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    
+    background-image: url(../m_evt_img/drawinglots_board.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+.contents_msg{
+    width: 90%;
+    height: 35%;
+}
+
+
+/* iPad 세로 */
+@media screen and (min-width : 768px) and (max-width : 1023px) and (orientation : portrait ) {
+    #contents {
+        width: 50vw;
+        height: 70vh;
+        
+    }
+
+}
+/* iPad Pro 세로 */
+@media screen and (min-width : 1024px) and (max-width : 1365px) and (orientation : portrait ) {
+    #contents {
+        width: 50vw;
+        height: 70vh;
+        
+    }
+    
+}
+
+@supports (-webkit-touch-callout: none) {
+    #contents {
+        background: url(../m_evt_img/drawinglots_board.png) center top no-repeat scroll;
+        background-size: auto 100%;
+    }
+}
